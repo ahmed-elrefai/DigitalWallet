@@ -7,6 +7,7 @@
 #include <string.h>
 #include <string>
 
+#include "Transactions.h"
 
 class User {
     double Balance;
@@ -16,7 +17,7 @@ class User {
 public:
     stack<Transactions>* History;
     User();
-    User(std::string init_username, std::string init_password, double init_balance, std::stack<Transactions>* history);
+    User(string init_username, string init_password, double init_balance, stack<Transactions>* history);
     void setBalance(double newBalance);
     double getBalance();
     void sendMoney(double amount, User& reciever);
